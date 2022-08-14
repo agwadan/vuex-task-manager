@@ -1,12 +1,21 @@
 <template>
   <div>
     <h3>Todos</h3>
+    <div class="todos">
+      <div v-for="todo in allTodos" v-bind:key="todo.id" class="todo">
+        {{todo.title}}
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+
+import { mapGetters } from 'vuex'; //----------------- Maps getters from vuex to the component
+
 export default {
-  name: "ToDos "
+  name: "ToDos",
+  computed: mapGetters(['allTodos'])
 
 }
 </script>
