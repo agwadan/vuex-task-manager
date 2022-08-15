@@ -1,8 +1,8 @@
 //STATE
 //------------
-export const state = () => {
+export const state = () => ({
   tasks: []
-}
+})
 
 //MUTATIONS
 //------------
