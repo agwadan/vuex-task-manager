@@ -16,7 +16,11 @@
     </div>
 
     <div class="tasks">
-{{$store.state.tasks}}
+      <Task
+        v-for="(task,i) in $store.state.tasks"
+        :key="i"
+        :task="task"
+      />
     </div>
   </main>
 </template>
